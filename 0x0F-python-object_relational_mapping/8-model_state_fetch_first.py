@@ -18,6 +18,6 @@ if __name__ == "__main__":
     # query and display results
     states = session.query(State).order_by(State.id).first()
     if states is None:
-		print("Nothing")
-	else:
+        print("Nothing")
+    else:
         print("{}: {}".format(state.id, state.name))
