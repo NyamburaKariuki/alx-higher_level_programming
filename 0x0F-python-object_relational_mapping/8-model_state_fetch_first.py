@@ -11,7 +11,7 @@ from model_state import Base, State
 if __name__ == "__main__":
     eng = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(argv[1],
                                                            argv[2], argv[3])
-    Base.metadata.create_all(engine)
+    # Base.metadata.create_all(engine)
     engine = create_engine(eng)
     Session = sessionmaker(bind=engine)
     session = Session()
