@@ -5,7 +5,7 @@ of hbtn_0e_0_usa where name matches the argument
 """
 
 from sys import argv
-import MySQLdb
+import MySQLdb as db
 
 if __name__ == '__main__':
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
@@ -15,7 +15,6 @@ if __name__ == '__main__':
     id ASC".format(argv[4]))
     results = cursor.fetchall()
     for r in results:
-        if r[1] == argv[4]:
-            print(r)
+        print(r)
     cursor.close()
     db.close()
