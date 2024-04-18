@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     session = Session()
 
-    state = session.query(State).filter(State.name.contain('a'))
+    state = session.query(State).filter(State.name.contains('a'))
     if state:
         for s in state:
             session.delete(s)
