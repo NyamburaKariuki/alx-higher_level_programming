@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-prints the State object with the name passed\
-as argument from the database hbtn_0e_6_usa
+This script prints the first State object
+from the database `hbtn_0e_6_usa`.
 """
 
 from sys import argv
@@ -15,7 +15,7 @@ if __name__ == "__main__":
     from the database.
     """
 
-    eng = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
+    eng= "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
         argv[1], argv[2], argv[3])
 
     engine = create_engine(eng)
@@ -23,8 +23,8 @@ if __name__ == "__main__":
 
     session = Session()
 
-    states = session.query(State).filter(State.name == argv[4]).first()
-    if states is not None:
-        print('{}'.format(state.id))
+    state = session.query(State).filter(State.name == argv[4]).first()
+    if state is not None:
+        print('{0}'.format(state.id))
     else:
         print("Not found")
