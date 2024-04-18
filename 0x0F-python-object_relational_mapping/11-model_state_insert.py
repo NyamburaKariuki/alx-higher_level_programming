@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-adds the State object “Louisiana” to the database hbtn_0e_6_usa
+This script adds the State object
+`Louisiana` to the database `hbtn_0e_6_usa`.
 """
 
 from sys import argv
@@ -10,7 +11,8 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    adds the State object “Louisiana” to the database hbtn_0e_6_usa
+    Access to the database and get a state
+    from the database.
     """
 
     eng = "mysql+mysqldb://{}:{}@localhost:3306/{}".format(
