@@ -6,7 +6,7 @@ found in the header of the response.
 
 
 if __name__ == "__main__":
-   import urllib.request
+    import urllib.request
     import urllib.parse
     import sys
 
@@ -17,4 +17,4 @@ if __name__ == "__main__":
     DATA = DATA.encode('ascii')
 
     with urllib.request.urlopen(url, DATA) as response:
-        print(response.read().decode('utf-8')) 
+        print(response.read().decode('utf-8'))
